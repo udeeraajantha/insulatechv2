@@ -9,6 +9,7 @@ import { services, testimonials, portfolio } from '@/lib/data';
 
 export default function Home() {
   const recentProjects = portfolio.slice(0, 3);
+  const homeServices = services.slice(0, 3);
   return (
     <div className="flex flex-col">
       <section className="relative w-full py-20 md:py-32 lg:py-48 flex items-center justify-center text-white">
@@ -66,7 +67,7 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
+            {homeServices.map((service) => (
               <Card key={service.slug} className="flex flex-col text-left hover:shadow-xl transition-shadow duration-300 overflow-hidden rounded-lg">
                 <CardHeader className="flex-row items-center gap-4 p-6">
                   <div className="flex h-12 w-12 items-center justify-center rounded-md bg-primary/10 text-primary">
