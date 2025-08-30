@@ -75,7 +75,7 @@ export function ContactForm() {
             </div>
             <div>
                 <Label htmlFor="phone">Phone Number *</Label>
-                <Input id="phone" name="phone" type="tel" placeholder="+971 50 123 4567" required />
+                <Input id="phone" name="phone" type="tel" placeholder="+971 52 180 2244" required />
                 {state.errors?.phone && <p className="text-sm text-destructive mt-1">{state.errors.phone[0]}</p>}
             </div>
         </div>

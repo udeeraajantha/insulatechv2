@@ -40,9 +40,9 @@ export function Header() {
           ))}
         </nav>
         <div className="hidden md:flex items-center gap-4">
-            <a href="tel:+971501234567" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary">
+            <a href="tel:+971521802244" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary">
                 <Phone className="h-4 w-4" />
-                +971 50 123 4567
+                +971 52 180 2244
             </a>
           <Button asChild>
             <Link href="/contact">Get Quote</Link>
@@ -80,9 +80,9 @@ export function Header() {
                   ))}
                 </nav>
                 <div className="mt-auto space-y-4">
-                    <a href="tel:+971501234567" className="flex items-center justify-center gap-2 text-lg font-medium text-muted-foreground hover:text-primary">
+                    <a href="tel:+971521802244" className="flex items-center justify-center gap-2 text-lg font-medium text-muted-foreground hover:text-primary">
                         <Phone className="h-5 w-5" />
-                        +971 50 123 4567
+                        +971 52 180 2244
                     </a>
                     <SheetClose asChild>
                         <Button asChild className="w-full">

@@ -6,7 +6,7 @@ const contactInfo = [
     {
         icon: <Phone className="h-6 w-6 text-primary" />,
         title: 'Phone',
-        lines: ['+971 50 123 4567', '+971 4 567 8901'],
+        lines: ['+971 52 180 2244', '+971 4 567 8901'],
     },
     {
         icon: <Mail className="h-6 w-6 text-primary" />,
@@ -29,12 +29,12 @@ const quickContactOptions = [
     {
         icon: <Phone className="h-5 w-5" />,
         text: 'Call for Immediate Support',
-        href: 'tel:+971501234567'
+        href: 'tel:+971521802244'
     },
     {
         icon: <MessageSquare className="h-5 w-5" />,
         text: 'WhatsApp Message',
-        href: 'https://wa.me/971501234567'
+        href: 'https://wa.me/971521802244'
     },
     {
         icon: <MailPlus className="h-5 w-5" />,
@@ -94,9 +94,9 @@ export function GetInTouch() {
                 Have a water leak or urgent moisture issue? Our emergency team is available around the clock.
             </p>
             <Button className="w-full" asChild>
-                <Link href="tel:+971501234567">
+                <Link href="tel:+971521802244">
                     <Phone className="mr-2 h-4 w-4" />
-                    Emergency Hotline: +971 50 123 4567
+                    Emergency Hotline: +971 52 180 2244
                 </Link>
             </Button>
         </div>
