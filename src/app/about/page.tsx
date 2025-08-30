@@ -189,16 +189,16 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-bold text-primary">Our Leadership Team</h2>
                 <p className="mt-4 text-muted-foreground">Meet the experienced professionals who lead our company and ensure every project meets our exacting standards.</p>
             </div>
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="mt-12 flex justify-center">
                 {leadershipTeam.map((member) => (
                     <div key={member.name} className="flex flex-col items-center text-center">
-                        <Avatar className="h-28 w-28 bg-primary text-primary-foreground">
-                            <AvatarFallback className="text-3xl bg-primary text-primary-foreground">{member.initials}</AvatarFallback>
+                        <Avatar className="h-36 w-36 bg-primary text-primary-foreground">
+                            <AvatarFallback className="text-5xl bg-primary text-primary-foreground">{member.initials}</AvatarFallback>
                         </Avatar>
-                        <h3 className="mt-4 text-lg font-bold">{member.name}</h3>
-                        <p className="text-primary font-medium">{member.role}</p>
-                        <p className="text-sm text-muted-foreground">{member.experience}</p>
-                        <p className="text-sm text-muted-foreground">{member.specialty}</p>
+                        <h3 className="mt-6 text-2xl font-bold">{member.name}</h3>
+                        <p className="text-primary font-semibold text-lg">{member.role}</p>
+                        <p className="text-md text-muted-foreground">{member.experience}</p>
+                        <p className="text-md text-muted-foreground">{member.specialty}</p>
                     </div>
                 ))}
             </div>
