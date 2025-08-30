@@ -2,12 +2,13 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { portfolio } from '@/lib/data';
 import type { Metadata } from 'next';
-import { MapPin, Calendar, User, CheckCircle, Award } from 'lucide-react';
+import { MapPin, Calendar, User, CheckCircle, Award, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 // export const metadata: Metadata = {
@@ -119,6 +120,20 @@ export default function PortfolioPage() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full py-16 md:py-24 bg-accent text-accent-foreground">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter">Ready to Start Your Project?</h2>
+          <p className="mt-3 max-w-2xl mx-auto">
+            Join our satisfied clients and experience the InsulaTech difference. Contact us today for a free consultation and detailed project proposal.
+          </p>
+          <div className="mt-6">
+            <Button size="lg" variant="secondary" asChild>
+              <Link href="/contact">Start Your Project <ArrowRight className="ml-2 h-4 w-4" /></Link>
+            </Button>
           </div>
         </div>
       </section>
