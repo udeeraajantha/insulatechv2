@@ -212,13 +212,6 @@ export const leadershipTeam = [
         initials: 'AA',
     },
     {
-        name: 'Sarah Al-Zahra',
-        role: 'Project Manager',
-        experience: '8+ years',
-        specialty: 'Commercial Projects',
-        initials: 'SA',
-    },
-    {
         name: 'Mohamed Ali',
         role: 'Field Supervisor',
         experience: '10+ years',
