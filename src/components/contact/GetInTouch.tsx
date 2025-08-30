@@ -16,7 +16,7 @@ const contactInfo = [
     {
         icon: <MapPin className="h-6 w-6 text-primary" />,
         title: 'Address',
-        lines: ['Ajman Free Zone', 'United Arab Emirates'],
+        lines: ['Office - C1 - 1F - SF3829, Ajman Free Zone C1 Building', 'Ajman Free Zone, Ajman'],
     },
     {
         icon: <Clock className="h-6 w-6 text-primary" />,
