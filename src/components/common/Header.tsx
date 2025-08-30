@@ -23,7 +23,7 @@ export function Header() {
     <header className="bg-background/80 sticky top-0 z-50 w-full border-b backdrop-blur-sm">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="Insula Tech Logo" width={32} height={32} className="h-8 w-8" />
+          <Image src="/logo.png" alt="Insula Tech Logo" width={50} height={32} className="h-8 w-auto" />
           <span className="font-bold text-xl text-primary">Insula Tech</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
@@ -61,7 +61,7 @@ export function Header() {
               <div className="flex flex-col h-full">
                 <div className="flex items-center border-b pb-4">
                   <Link href="/" className="flex items-center gap-2">
-                    <Image src="/logo.png" alt="Insula Tech Logo" width={32} height={32} className="h-8 w-8" />
+                    <Image src="/logo.png" alt="Insula Tech Logo" width={50} height={32} className="h-8 w-auto" />
                     <span className="font-bold text-lg text-primary">Insula Tech</span>
                   </Link>
                 </div>
