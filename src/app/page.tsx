@@ -68,22 +68,13 @@ export default function Home() {
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <Card key={service.slug} className="flex flex-col text-left hover:shadow-xl transition-shadow duration-300 overflow-hidden rounded-lg">
-                <CardHeader className="p-0">
-                  <div className="relative aspect-video">
-                    <Image 
-                      src={service.image} 
-                      alt={service.title}
-                      data-ai-hint={service.imageHint}
-                      fill
-                      className="object-cover"
-                    />
-                     <div className="absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-md bg-primary/80 text-primary-foreground backdrop-blur-sm">
-                      <service.icon className="h-7 w-7" />
-                    </div>
+                <CardHeader className="flex-row items-center gap-4 p-6">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-md bg-primary/10 text-primary">
+                    <service.icon className="h-7 w-7" />
                   </div>
+                  <CardTitle className="text-xl font-bold text-primary">{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="flex-grow flex flex-col p-6">
-                    <CardTitle className="text-xl font-bold text-primary mb-2">{service.title}</CardTitle>
+                <CardContent className="flex-grow flex flex-col p-6 pt-0">
                     <p className="text-muted-foreground mb-4 flex-grow">{service.description}</p>
                     <ul className="space-y-2 text-sm text-muted-foreground">
                       {service.features.map((feature, i) => (
