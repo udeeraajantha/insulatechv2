@@ -212,13 +212,6 @@ export const leadershipTeam = [
         initials: 'AA',
     },
     {
-        name: 'Omar Hassan',
-        role: 'Technical Director',
-        experience: '12+ years',
-        specialty: 'Spray Foam Technology',
-        initials: 'OH',
-    },
-    {
         name: 'Sarah Al-Zahra',
         role: 'Project Manager',
         experience: '8+ years',
