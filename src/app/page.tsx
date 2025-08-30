@@ -105,7 +105,7 @@ export default function Home() {
       <section className="w-full py-12 md:py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Why Choose InsulaTech Pro?</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Why Choose Insula Tech?</h2>
             <p className="text-primary-foreground/80">
               With over 10 years of experience in the market, we deliver professional insulation and waterproofing solutions that protect your investment and improve comfort.
             </p>

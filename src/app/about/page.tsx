@@ -8,7 +8,7 @@ import { leadershipTeam } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn more about InsulaTech Pro, our mission, values, and the team dedicated to providing the best insulation services.',
+  description: 'Learn more about Insula Tech, our mission, values, and the team dedicated to providing the best insulation services.',
 };
 
 const coreValues = [

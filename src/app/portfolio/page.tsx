@@ -128,7 +128,7 @@ export default function PortfolioPage() {
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl font-bold tracking-tighter">Ready to Start Your Project?</h2>
           <p className="mt-3 max-w-2xl mx-auto">
-            Join our satisfied clients and experience the InsulaTech difference. Contact us today for a free consultation and detailed project proposal.
+            Join our satisfied clients and experience the Insula Tech difference. Contact us today for a free consultation and detailed project proposal.
           </p>
           <div className="mt-6">
             <Button size="lg" variant="secondary" asChild>

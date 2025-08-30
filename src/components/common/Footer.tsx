@@ -9,7 +9,7 @@ export function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <Layers className="h-6 w-6 text-primary" />
-              <span className="font-bold text-lg text-primary">InsulaTech Pro</span>
+              <span className="font-bold text-lg text-primary">Insula Tech</span>
             </Link>
             <p className="text-sm">Your trusted partner for professional insulation solutions.</p>
           </div>
@@ -41,7 +41,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t mt-8 pt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} InsulaTech Pro. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Insula Tech. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

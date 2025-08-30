@@ -23,7 +23,7 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Layers className="h-6 w-6 text-primary" />
-          <span className="font-bold text-xl text-primary">InsulaTech Pro</span>
+          <span className="font-bold text-xl text-primary">Insula Tech</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
@@ -61,7 +61,7 @@ export function Header() {
                 <div className="flex items-center border-b pb-4">
                   <Link href="/" className="flex items-center gap-2">
                     <Layers className="h-6 w-6 text-primary" />
-                    <span className="font-bold text-lg text-primary">InsulaTech Pro</span>
+                    <span className="font-bold text-lg text-primary">Insula Tech</span>
                   </Link>
                 </div>
                 <nav className="flex flex-col gap-4 mt-6">

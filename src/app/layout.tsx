@@ -6,10 +6,10 @@ import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: {
-    default: 'InsulaTech Pro - Professional Insulation Services',
-    template: '%s | InsulaTech Pro',
+    default: 'Insula Tech - Professional Insulation Services',
+    template: '%s | Insula Tech',
   },
-  description: 'InsulaTech Pro offers top-tier residential, commercial, and industrial insulation solutions to improve energy efficiency and comfort.',
+  description: 'Insula Tech offers top-tier residential, commercial, and industrial insulation solutions to improve energy efficiency and comfort.',
   keywords: ['insulation', 'residential insulation', 'commercial insulation', 'industrial insulation', 'energy efficiency'],
 };
 

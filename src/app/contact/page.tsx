@@ -6,7 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Get in touch with InsulaTech Pro for a free consultation or to ask any questions you may have.',
+  description: 'Get in touch with Insula Tech for a free consultation or to ask any questions you may have.',
 };
 
 export default function ContactPage() {
