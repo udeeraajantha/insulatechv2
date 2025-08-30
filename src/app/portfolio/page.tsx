@@ -12,12 +12,32 @@ export const metadata: Metadata = {
 export default function PortfolioPage() {
   return (
     <div className="w-full">
-      <section className="bg-secondary py-16 md:py-24">
+      <section className="bg-primary py-16 md:py-24 text-primary-foreground">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl text-primary">Our Work</h1>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            A gallery of our successful insulation projects. See the InsulaTech Pro difference.
+          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">Our Project Portfolio</h1>
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-primary-foreground/90">
+            Explore our completed projects across the UAE. From residential waterproofing to large-scale commercial insulation, see how we deliver exceptional results.
           </p>
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            <Card className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground">
+              <CardContent className="p-6 text-center">
+                <p className="text-4xl font-bold text-accent">500+</p>
+                <p className="text-sm text-primary-foreground/80 mt-2">Completed Projects</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground">
+              <CardContent className="p-6 text-center">
+                <p className="text-4xl font-bold text-accent">98%</p>
+                <p className="text-sm text-primary-foreground/80 mt-2">Client Satisfaction</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground">
+              <CardContent className="p-6 text-center">
+                <p className="text-4xl font-bold text-accent">10+</p>
+                <p className="text-sm text-primary-foreground/80 mt-2">Years Experience</p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
