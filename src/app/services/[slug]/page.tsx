@@ -1,11 +1,12 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { services } from '@/lib/data';
-import { FaqGenerator } from '@/components/services/FaqGenerator';
+// import { FaqGenerator } from '@/components/services/FaqGenerator';
 import type { Metadata, ResolvingMetadata } from 'next'
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { CheckCircle } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 type Props = {
   params: { slug: string }
@@ -85,7 +86,34 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                     </Button>
                 </div>
                 <div className="lg:col-span-1">
-                    <FaqGenerator serviceName={service.title} serviceDescription={service.longDescription} />
+                    <Card className="sticky top-24">
+                        <CardHeader>
+                            <CardTitle>Our Guarantee</CardTitle>
+                            <CardDescription>
+                                We stand by our work with industry-leading warranties and a commitment to quality.
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <ul className="space-y-3 text-sm text-muted-foreground">
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                                    <span>Highest-quality materials used in every project.</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                                    <span>Certified and experienced installation professionals.</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <CheckCircle className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                                    <span>Comprehensive warranties for your peace of mind.</span>
+                                </li>
+                                 <li className="flex items-start gap-2">
+                                    <CheckCircle className="h-4 w-4 text-accent mt-1 flex-shrink-0" />
+                                    <span>Post-project support and follow-up.</span>
+                                </li>
+                            </ul>
+                        </CardContent>
+                    </Card>
                 </div>
             </div>
         </div>
