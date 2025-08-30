@@ -239,7 +239,6 @@ export default function Home() {
                         <CardFooter className="pt-4 border-t">
                           <div className="flex items-center gap-4">
                             <Avatar>
-                              <AvatarImage src={`https://i.pravatar.cc/150?u=${testimonial.name}`} />
                               <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
                             </Avatar>
                             <div>
