@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <Image src="/logo.svg" alt="Insula Tech Logo" width={37} height={24} className="h-6 w-auto" />
+              <Image src="/logo.svg" alt="Insula Tech Logo" width={37} height={24} className="h-8 w-auto" />
               <span className="font-bold text-lg text-primary">Insula Tech</span>
             </Link>
             <p className="text-sm">Your trusted partner for professional insulation solutions.</p>

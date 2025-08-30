@@ -21,9 +21,9 @@ export function Header() {
 
   return (
     <header className="bg-background/80 sticky top-0 z-50 w-full border-b backdrop-blur-sm">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.svg" alt="Insula Tech Logo" width={50} height={32} className="h-8 w-auto" />
+          <Image src="/logo.svg" alt="Insula Tech Logo" width={50} height={32} className="h-10 w-auto" />
           <span className="font-bold text-xl text-primary">Insula Tech</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
