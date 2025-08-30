@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { CheckCircle, ArrowRight, ShieldCheck, Zap, Clock } from 'lucide-react';
+import { CheckCircle, ArrowRight, ShieldCheck, Zap, Clock, Star } from 'lucide-react';
 import { services, testimonials } from '@/lib/data';
 
 export default function Home() {
@@ -109,45 +109,66 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24">
+      <section className="w-full py-12 md:py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">Why Choose InsulaTech Pro?</h2>
-            <p className="mt-4 text-muted-foreground">
-              We are committed to providing the highest quality service and results. Our experience and dedication set us apart.
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Why Choose InsulaTech Pro?</h2>
+            <p className="text-primary-foreground/80">
+              With over 10 years of experience in the market, we deliver professional insulation and waterproofing solutions that protect your investment and improve comfort.
             </p>
-            <ul className="mt-6 space-y-4">
+            <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold">Energy Savings</h3>
-                  <p className="text-muted-foreground">Our insulation solutions can significantly reduce your heating and cooling costs.</p>
-                </div>
+                <span>Licensed and fully insured contractors</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold">Improved Comfort</h3>
-                  <p className="text-muted-foreground">Enjoy a more comfortable indoor environment with consistent temperatures year-round.</p>
-                </div>
+                <span>10+ years serving UAE properties</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-semibold">Expert Technicians</h3>
-                  <p className="text-muted-foreground">Our certified professionals ensure a high-quality installation every time.</p>
-                </div>
+                <span>Lifetime warranties on select services</span>
+              </li>
+               <li className="flex items-start gap-3">
+                <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
+                <span>24/7 emergency response available</span>
               </li>
             </ul>
+             <Button size="lg" variant="secondary" asChild>
+                <Link href="/about">Learn More About Us <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              </Button>
           </div>
-          <div className="relative h-80 lg:h-96">
-            <Image
-              src="https://picsum.photos/800/600"
-              alt="Insulation professionals at work"
-              data-ai-hint="insulation installation"
-              fill
-              className="object-cover rounded-lg shadow-xl"
-            />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <Card className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground">
+              <CardContent className="p-6 text-center">
+                <p className="text-4xl font-bold text-accent">500+</p>
+                <p className="text-sm text-primary-foreground/80 mt-2">Projects Completed</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground">
+              <CardContent className="p-6 text-center">
+                <p className="text-4xl font-bold text-accent">98%</p>
+                <p className="text-sm text-primary-foreground/80 mt-2">Client Satisfaction</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground">
+              <CardContent className="p-6 text-center">
+                <p className="text-4xl font-bold text-accent">10+</p>
+                <p className="text-sm text-primary-foreground/80 mt-2">Years Experience</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground">
+                <CardContent className="p-6 text-center">
+                    <div className="flex justify-center text-accent">
+                        <Star className="w-7 h-7" />
+                        <Star className="w-7 h-7" />
+                        <Star className="w-7 h-7" />
+                        <Star className="w-7 h-7" />
+                        <Star className="w-7 h-7" />
+                    </div>
+                    <p className="text-sm text-primary-foreground/80 mt-2">Average Rating</p>
+                </CardContent>
+            </Card>
           </div>
         </div>
       </section>
