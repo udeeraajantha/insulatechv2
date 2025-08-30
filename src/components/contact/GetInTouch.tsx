@@ -6,7 +6,7 @@ const contactInfo = [
     {
         icon: <Phone className="h-6 w-6 text-primary" />,
         title: 'Phone',
-        lines: ['+971 52 180 2244', '+971 4 567 8901'],
+        lines: ['+971 52 180 2244'],
     },
     {
         icon: <Mail className="h-6 w-6 text-primary" />,
@@ -78,7 +78,7 @@ export function GetInTouch() {
                      <Button key={option.text} variant="outline" className="w-full justify-start" asChild>
                         <Link href={option.href} target="_blank">
                            {option.icon}
-                           <span>{option.text}</span>
+                           <span className="ml-2">{option.text}</span>
                         </Link>
                     </Button>
                 ))}
