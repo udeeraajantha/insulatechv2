@@ -11,7 +11,7 @@ const contactInfo = [
     {
         icon: <Mail className="h-6 w-6 text-primary" />,
         title: 'Email',
-        lines: ['info@insulatech.ae', 'quotes@insulatech.ae'],
+        lines: ['info@insulatech.ae'],
     },
     {
         icon: <MapPin className="h-6 w-6 text-primary" />,
