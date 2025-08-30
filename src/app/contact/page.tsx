@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { ContactForm } from '@/components/contact/ContactForm';
 import { GetInTouch } from '@/components/contact/GetInTouch';
 import type { Metadata } from 'next';
@@ -39,7 +40,9 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-5 gap-12">
             <div className="lg:col-span-3">
-              <ContactForm />
+              <Suspense fallback={<div>Loading...</div>}>
+                <ContactForm />
+              </Suspense>
             </div>
             <div className="lg:col-span-2">
               <GetInTouch />
