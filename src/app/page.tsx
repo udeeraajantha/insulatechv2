@@ -188,7 +188,7 @@ export default function Home() {
                 <Card className="overflow-hidden h-full rounded-lg">
                   <div className="relative aspect-[4/3]">
                     <Image
-                      src={project.afterImage}
+                      src={project.image}
                       alt={project.title}
                       data-ai-hint={project.hint}
                       fill
