@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react';
-import { Building, Factory, Home, Droplets, Wind, Warehouse } from 'lucide-react';
+import { Building, Factory, Home, Droplets, Wind, Warehouse, Thermometer, Shield } from 'lucide-react';
 
 export const services = [
   {
@@ -47,6 +47,57 @@ export const services = [
       'Lifetime warranty',
     ]
   },
+  {
+    slug: 'commercial-insulation',
+    title: 'Commercial Insulation',
+    description: 'Large-scale insulation solutions for commercial buildings, warehouses, and industrial facilities.',
+    longDescription: 'Large-scale insulation solutions for commercial buildings, warehouses, and industrial facilities. We provide roof and wall insulation systems, HVAC duct insulation, pipe and tank insulation, fire-rated insulation, code compliance certification, and project management services to ensure your commercial space is energy-efficient and compliant.',
+    icon: Building,
+    image: 'https://picsum.photos/600/400?random=34',
+    imageHint: 'commercial building construction',
+    features: [
+      'Roof and wall insulation systems',
+      'HVAC duct insulation',
+      'Pipe and tank insulation',
+      'Fire-rated insulation',
+      'Code compliance certification',
+      'Project management services'
+    ]
+  },
+  {
+    slug: 'moisture-control',
+    title: 'Moisture Control Systems',
+    description: 'Comprehensive moisture management solutions to prevent mold, mildew, and structural damage.',
+    longDescription: 'Our comprehensive moisture management solutions are designed to prevent mold, mildew, and structural damage. We offer crawl space encapsulation, dehumidification systems, ventilation improvements, mold remediation, air quality testing, and ongoing maintenance plans to protect your property from moisture-related issues.',
+    icon: Shield,
+    image: 'https://picsum.photos/600/400?random=35',
+    imageHint: 'water drops condensation',
+    features: [
+      'Crawl space encapsulation',
+      'Dehumidification systems',
+      'Ventilation improvements',
+      'Mold remediation',
+      'Air quality testing',
+      'Ongoing maintenance plans'
+    ]
+  },
+  {
+    slug: 'thermal-bridging',
+    title: 'Thermal Bridging Solutions',
+    description: 'Advanced thermal bridge mitigation to eliminate heat loss and condensation issues in modern construction.',
+    longDescription: 'We offer advanced thermal bridge mitigation to eliminate heat loss and condensation issues in modern construction. Our services include continuous insulation systems, thermal break installation, building envelope analysis, energy modeling, performance verification, and LEED compliance support to maximize your building\'s energy performance.',
+    icon: Thermometer,
+    image: 'https://picsum.photos/600/400?random=36',
+    imageHint: 'thermal imaging building',
+    features: [
+      'Continuous insulation systems',
+      'Thermal break installation',
+      'Building envelope analysis',
+      'Energy modeling',
+      'Performance verification',
+      'LEED compliance support'
+    ]
+  }
 ];
 
 export const portfolio = [
