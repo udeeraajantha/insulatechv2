@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Layers, Menu } from "lucide-react";
+import { Layers, Menu, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/portfolio", label: "Portfolio" },
+  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -38,9 +39,13 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="hidden md:flex">
+        <div className="hidden md:flex items-center gap-4">
+            <a href="tel:+971501234567" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary">
+                <Phone className="h-4 w-4" />
+                +971 50 123 4567
+            </a>
           <Button asChild>
-            <Link href="/contact">Get a Free Quote</Link>
+            <Link href="/contact">Get Quote</Link>
           </Button>
         </div>
         <div className="md:hidden">
@@ -74,11 +79,15 @@ export function Header() {
                     </SheetClose>
                   ))}
                 </nav>
-                <div className="mt-auto">
-                  <SheetClose asChild>
-                    <Button asChild className="w-full">
-                        <Link href="/contact">Get a Free Quote</Link>
-                    </Button>
+                <div className="mt-auto space-y-4">
+                    <a href="tel:+971501234567" className="flex items-center justify-center gap-2 text-lg font-medium text-muted-foreground hover:text-primary">
+                        <Phone className="h-5 w-5" />
+                        +971 50 123 4567
+                    </a>
+                    <SheetClose asChild>
+                        <Button asChild className="w-full">
+                            <Link href="/contact">Get Quote</Link>
+                        </Button>
                   </SheetClose>
                 </div>
               </div>

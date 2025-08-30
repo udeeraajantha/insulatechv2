@@ -4,27 +4,54 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle, ArrowRight, ShieldCheck, Zap, Clock } from 'lucide-react';
 import { services, testimonials } from '@/lib/data';
 
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="relative w-full py-20 md:py-32 lg:py-40 bg-secondary">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-primary">
-            Superior Insulation, Unmatched Comfort
-          </h1>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            InsulaTech Pro delivers expert insulation solutions that enhance energy efficiency and comfort for homes and businesses.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" asChild>
-              <Link href="/contact">Get a Free Quote</Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link href="/services">Our Services <ArrowRight className="ml-2 h-4 w-4" /></Link>
-            </Button>
+      <section className="relative w-full py-20 md:py-32 lg:py-48 flex items-center justify-center text-white">
+        <Image
+          src="https://picsum.photos/1920/1080"
+          alt="Professional insulation services"
+          data-ai-hint="insulation installation"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-primary/80" />
+        <div className="relative container mx-auto px-4 md:px-6 text-left">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+              Professional <br />
+              <span className="text-accent">Insulation Solutions</span> <br />
+              for Your Property
+            </h1>
+            <p className="mt-6 max-w-xl text-lg text-primary-foreground/90">
+              Expert insulation and waterproofing services across the UAE. Energy-efficient solutions that protect your property and reduce costs.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row items-start gap-4">
+              <Button size="lg" asChild>
+                <Link href="/contact">Get Free Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
+              </Button>
+            </div>
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+              <div className="flex flex-col items-center gap-2">
+                <ShieldCheck className="h-10 w-10 text-accent" />
+                <h3 className="font-semibold">Licensed & Insured</h3>
+                <p className="text-sm text-primary-foreground/80">Full coverage protection</p>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <Zap className="h-10 w-10 text-accent" />
+                <h3 className="font-semibold">10+ Years Experience</h3>
+                <p className="text-sm text-primary-foreground/80">Proven expertise</p>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <Clock className="h-10 w-10 text-accent" />
+                <h3 className="font-semibold">24/7 Emergency</h3>
+                <p className="text-sm text-primary-foreground/80">Always available</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
