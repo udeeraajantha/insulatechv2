@@ -5,6 +5,7 @@ import { FaqGenerator } from '@/components/services/FaqGenerator';
 import type { Metadata, ResolvingMetadata } from 'next'
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { CheckCircle } from 'lucide-react';
 
 type Props = {
   params: { slug: string }
@@ -65,8 +66,21 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                 <div className="lg:col-span-2 space-y-6">
                     <h2 className="text-3xl font-bold text-primary">Service Details</h2>
                     <p className="text-lg text-muted-foreground">{service.longDescription}</p>
+                    
+                    <div className="space-y-4">
+                        <h3 className="text-2xl font-bold text-primary">Key Features</h3>
+                        <ul className="space-y-2">
+                            {service.features.map((feature, i) => (
+                                <li key={i} className="flex items-center gap-3">
+                                    <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
+                                    <span className="text-muted-foreground">{feature}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
                     <Button size="lg" asChild>
-                      <Link href="/contact">Request Consultation</Link>
+                      <Link href={`/contact?service=${service.slug}`}>Request Consultation</Link>
                     </Button>
                 </div>
                 <div className="lg:col-span-1">

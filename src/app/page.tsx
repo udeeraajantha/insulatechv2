@@ -56,38 +56,60 @@ export default function Home() {
         </div>
       </section>
       
-      <section id="services" className="w-full py-12 md:py-24 lg:py-32">
+      <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">Our Services</h2>
-            <p className="mt-3 max-w-xl mx-auto text-muted-foreground">
-              We offer a comprehensive range of insulation services to meet your needs.
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">Our Professional Services</h2>
+            <p className="mt-3 max-w-2xl mx-auto text-muted-foreground">
+              Comprehensive insulation and waterproofing solutions designed to protect your property and improve energy efficiency.
             </p>
           </div>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
-              <Card key={service.slug} className="flex flex-col text-center items-center hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground mb-4">
-                    <service.icon className="h-8 w-8" />
+              <Card key={service.slug} className="flex flex-col text-left hover:shadow-xl transition-shadow duration-300 overflow-hidden rounded-lg">
+                <CardHeader className="p-0">
+                  <div className="relative aspect-video">
+                    <Image 
+                      src={service.image} 
+                      alt={service.title}
+                      data-ai-hint={service.imageHint}
+                      fill
+                      className="object-cover"
+                    />
+                     <div className="absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-md bg-primary/80 text-primary-foreground backdrop-blur-sm">
+                      <service.icon className="h-7 w-7" />
+                    </div>
                   </div>
-                  <CardTitle className="text-xl font-semibold">{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-muted-foreground">{service.description}</p>
+                <CardContent className="flex-grow flex flex-col p-6">
+                    <CardTitle className="text-xl font-bold text-primary mb-2">{service.title}</CardTitle>
+                    <p className="text-muted-foreground mb-4 flex-grow">{service.description}</p>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      {service.features.map((feature, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                           <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2" />
+                           <span className="flex-1">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
                 </CardContent>
-                <CardFooter>
-                  <Button variant="link" asChild>
-                    <Link href={`/services/${service.slug}`}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                <CardFooter className="p-6 pt-0 mt-4">
+                  <Button variant="outline" className="w-full" asChild>
+                    <Link href={`/contact?service=${service.slug}`}>Get Quote <ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
                 </CardFooter>
               </Card>
             ))}
           </div>
+           <div className="mt-12 text-center">
+            <Button variant="outline" asChild>
+              <Link href="/services">View All Services <ArrowRight className="ml-2 h-4 w-4" /></Link>
+            </Button>
+          </div>
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+      <section className="w-full py-12 md:py-24">
         <div className="container mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">Why Choose InsulaTech Pro?</h2>
@@ -130,7 +152,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
+      <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">What Our Clients Say</h2>

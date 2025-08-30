@@ -2,6 +2,7 @@
 
 import { useFormState, useFormStatus } from 'react-dom';
 import { useEffect, useRef } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { submitContactForm, type ContactFormState } from '@/lib/actions';
 import { services } from '@/lib/data';
 import { useToast } from '@/hooks/use-toast';
@@ -35,6 +36,8 @@ export function ContactForm() {
   const [state, formAction] = useFormState(submitContactForm, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
+  const searchParams = useSearchParams();
+  const serviceQuery = searchParams.get('service');
 
   useEffect(() => {
     if (state.message) {
@@ -78,7 +81,7 @@ export function ContactForm() {
           </div>
           <div>
             <Label htmlFor="service">Service of Interest</Label>
-            <Select name="service" required>
+            <Select name="service" required defaultValue={serviceQuery || undefined}>
                 <SelectTrigger id="service">
                     <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
