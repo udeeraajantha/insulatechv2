@@ -3,6 +3,7 @@ import { ServiceAreaMap } from '@/components/contact/ServiceAreaMap';
 import type { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
@@ -32,15 +33,24 @@ export default function ContactPage() {
 
       <section className="w-full py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl font-bold tracking-tighter">Ready to Improve Your Property?</h2>
-          <p className="mt-3 max-w-xl mx-auto">
-            Contact us today for a free, no-obligation consultation and quote.
+          <h2 className="text-3xl font-bold tracking-tighter">Get Your Free Quote Today</h2>
+          <p className="mt-3 max-w-2xl mx-auto">
+            Ready to protect your property with professional insulation and waterproofing? Contact our experts for a free consultation and detailed project estimate.
           </p>
-          <div className="mt-6">
-            <Button size="lg" variant="secondary" asChild>
-              <Link href="/contact">Request a Consultation</Link>
-            </Button>
-          </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-4">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-5 w-5 text-accent" />
+                <span>Free Consultation</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-5 w-5 text-accent" />
+                <span>24-Hour Response</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-5 w-5 text-accent" />
+                <span>No Obligation Quote</span>
+              </div>
+            </div>
         </div>
       </section>
     </div>
