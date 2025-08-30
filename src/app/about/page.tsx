@@ -247,6 +247,20 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="w-full py-16 md:py-24 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+          <h2 className="text-3xl font-bold tracking-tighter">Ready to Work with the Best?</h2>
+          <p className="mt-3 max-w-2xl mx-auto">
+            Experience the Insula Tech difference. Contact us today for a free consultation and discover why we're the UAE's most trusted insulation and waterproofing contractor.
+          </p>
+          <div className="mt-6">
+            <Button size="lg" variant="secondary" asChild>
+              <Link href="/contact">Get Started Today <ArrowRight className="ml-2 h-4 w-4" /></Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
