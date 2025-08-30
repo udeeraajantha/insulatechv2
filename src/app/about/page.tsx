@@ -1,7 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Heart, Shield, Zap } from 'lucide-react';
+import { ArrowRight, CheckCircle, Heart, Shield, Zap, Award, Users, Target, Clock, LifeBuoy, Wrench } from 'lucide-react';
 import type { Metadata } from 'next';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { leadershipTeam } from '@/lib/data';
@@ -26,6 +26,47 @@ const coreValues = [
         icon: <Zap className="h-8 w-8 text-primary" />,
         title: "Innovation",
         description: "We stay ahead with the latest technologies and methods to provide the most effective insulation and waterproofing solutions."
+    }
+]
+
+const achievements = [
+    {
+        icon: <Award className="h-8 w-8 text-primary" />,
+        title: "Industry Recognition",
+        description: "UAE Building Excellence Award 2023"
+    },
+    {
+        icon: <Shield className="h-8 w-8 text-primary" />,
+        title: "Licensed & Certified",
+        description: "Full licensing and insurance coverage"
+    },
+    {
+        icon: <Users className="h-8 w-8 text-primary" />,
+        title: "Client Satisfaction",
+        description: "98% client satisfaction rate"
+    },
+    {
+        icon: <Target className="h-8 w-8 text-primary" />,
+        title: "Project Success",
+        description: "500+ successful project completions"
+    }
+]
+
+const whyChooseUs = [
+    {
+        icon: <LifeBuoy className="h-8 w-8 text-primary" />,
+        title: "Comprehensive Warranties",
+        description: "Up to lifetime warranties on select services, giving you complete peace of mind."
+    },
+    {
+        icon: <Clock className="h-8 w-8 text-primary" />,
+        title: "24/7 Emergency Service",
+        description: "Round-the-clock availability for urgent waterproofing and moisture issues."
+    },
+    {
+        icon: <Wrench className="h-8 w-8 text-primary" />,
+        title: "Industry Leading Methods",
+        description: "Latest technologies and proven techniques for superior, long-lasting results."
     }
 ]
 
@@ -159,6 +200,48 @@ export default function AboutPage() {
                         <p className="text-sm text-muted-foreground">{member.experience}</p>
                         <p className="text-sm text-muted-foreground">{member.specialty}</p>
                     </div>
+                ))}
+            </div>
+        </div>
+      </section>
+      
+      <section className="py-12 md:py-20 lg:py-24 bg-accent/10">
+        <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center max-w-3xl mx-auto">
+                <h2 className="text-3xl font-bold text-primary">Our Achievements</h2>
+                <p className="mt-4 text-muted-foreground">Recognition and milestones that reflect our commitment to excellence and client satisfaction.</p>
+            </div>
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {achievements.map((achievement) => (
+                    <div key={achievement.title} className="flex flex-col items-center text-center p-6 rounded-lg bg-background shadow-md">
+                        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                            {achievement.icon}
+                        </div>
+                        <h3 className="mt-6 text-xl font-bold text-primary">{achievement.title}</h3>
+                        <p className="mt-2 text-muted-foreground">{achievement.description}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center max-w-3xl mx-auto">
+                <h2 className="text-3xl font-bold text-primary">Why Choose Insula Tech?</h2>
+                <p className="mt-4 text-muted-foreground">What sets us apart from other contractors and makes us the preferred choice for discerning property owners.</p>
+            </div>
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                {whyChooseUs.map((item) => (
+                     <Card key={item.title}>
+                        <CardContent className="p-8 flex flex-col items-center text-center">
+                             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-secondary mb-6">
+                                {item.icon}
+                            </div>
+                            <h3 className="text-xl font-bold text-primary mb-2">{item.title}</h3>
+                            <p className="text-muted-foreground">{item.description}</p>
+                        </CardContent>
+                    </Card>
                 ))}
             </div>
         </div>
