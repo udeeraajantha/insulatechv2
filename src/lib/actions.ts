@@ -8,7 +8,7 @@ import { revalidatePath } from 'next/cache';
 const ContactFormSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
   email: z.string().email({ message: 'Please enter a valid email address.' }),
-  phone: z.string().optional(),
+  phone: z.string().min(1, { message: 'Please enter a phone number.' }),
   service: z.string({ required_error: 'Please select a service.' }).min(1, { message: 'Please select a service.' }),
   message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
 });

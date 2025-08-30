@@ -1,8 +1,6 @@
 import { ContactForm } from '@/components/contact/ContactForm';
-import { ServiceAreaMap } from '@/components/contact/ServiceAreaMap';
+import { GetInTouch } from '@/components/contact/GetInTouch';
 import type { Metadata } from 'next';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import { CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -38,9 +36,13 @@ export default function ContactPage() {
       
       <section className="py-12 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-12">
-            <ContactForm />
-            <ServiceAreaMap />
+          <div className="grid lg:grid-cols-5 gap-12">
+            <div className="lg:col-span-3">
+              <ContactForm />
+            </div>
+            <div className="lg:col-span-2">
+              <GetInTouch />
+            </div>
           </div>
         </div>
       </section>
