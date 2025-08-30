@@ -52,6 +52,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
             fill 
             className="object-cover"
             priority
+            unoptimized
         />
         <div className="absolute inset-0 bg-primary/70 flex items-center justify-center">
             <div className="container mx-auto px-4 md:px-6 text-center">

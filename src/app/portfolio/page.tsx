@@ -7,7 +7,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { portfolio } from '@/lib/data';
-import type { Metadata } from 'next';
 import { MapPin, Calendar, User, CheckCircle, Award, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -84,6 +83,7 @@ export default function PortfolioPage() {
                     data-ai-hint={project.hint}
                     fill
                     className="object-cover"
+                    unoptimized
                   />
                   <div className="absolute bottom-4 left-4 flex gap-2">
                     {project.tags.map(tag => (

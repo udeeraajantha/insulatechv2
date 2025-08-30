@@ -20,6 +20,7 @@ export default function Home() {
           fill
           className="object-cover"
           priority
+          unoptimized
         />
         <div className="absolute inset-0 bg-primary/80" />
         <div className="relative container mx-auto px-4 md:px-6 text-center">
@@ -185,6 +186,7 @@ export default function Home() {
                       data-ai-hint={project.hint}
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      unoptimized
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                     <div className="absolute bottom-0 p-6">
