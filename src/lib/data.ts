@@ -181,24 +181,24 @@ export const portfolio = [
 
 export const testimonials = [
   {
-    quote: 'InsulaTech Pro transformed our drafty old house into a cozy home. Our energy bills have dropped significantly, and the team was incredibly professional and efficient. Highly recommended!',
-    name: 'Sarah L.',
-    location: 'Springfield, IL',
+    quote: 'InsulaTech Pro transformed our villa in Dubai. The team was incredibly professional, and our DEWA bills have dropped significantly. Highly recommended!',
+    name: 'Fatima Al-Marzooqi',
+    location: 'Dubai, UAE',
   },
   {
     quote: 'The difference in our office temperature is night and day. The insulation work was top-notch, and the project was completed on schedule with no disruption to our business.',
-    name: 'David M.',
-    location: 'Metro City, IL',
+    name: 'Youssef Al-Hosani',
+    location: 'Abu Dhabi, UAE',
   },
   {
     quote: 'From the initial consultation to the final cleanup, the entire process was seamless. They insulated our new home\'s attic and walls, and we couldn\'t be happier with the results.',
-    name: 'Emily R.',
-    location: 'Oakville, IL',
+    name: 'Aisha Al-Nuaimi',
+    location: 'Sharjah, UAE',
   },
   {
     quote: 'As a facility manager, I need reliable contractors. InsulaTech Pro delivered on their promise for our industrial plant. Great work on the pipe insulation, a big improvement in safety and efficiency.',
-    name: 'John C.',
-    location: 'Industry Park, IL',
+    name: 'Hassan Al-Blooshi',
+    location: 'Ras Al Khaimah, UAE',
   },
 ];
 
