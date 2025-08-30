@@ -21,17 +21,17 @@ export default function Home() {
           priority
         />
         <div className="absolute inset-0 bg-primary/80" />
-        <div className="relative container mx-auto px-4 md:px-6 text-left">
-          <div className="max-w-3xl">
+        <div className="relative container mx-auto px-4 md:px-6 text-center">
+          <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
               Professional <br />
               <span className="text-accent">Insulation Solutions</span> <br />
               for Your Property
             </h1>
-            <p className="mt-6 max-w-xl text-lg text-primary-foreground/90">
+            <p className="mt-6 max-w-xl mx-auto text-lg text-primary-foreground/90">
               Expert insulation and waterproofing services across the UAE. Energy-efficient solutions that protect your property and reduce costs.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row items-start gap-4">
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" asChild>
                 <Link href="/contact">Get Free Quote <ArrowRight className="ml-2 h-5 w-5" /></Link>
               </Button>
