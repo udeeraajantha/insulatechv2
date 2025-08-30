@@ -34,7 +34,7 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4 text-primary">Contact Us</h3>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-1 flex-shrink-0" /> 123 Insulation Ave, Springfield, IL</li>
+              <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-1 flex-shrink-0" /> Office - C1 - 1F - SF3289, C1 Building, Ajman Free Zone, Ajman, UAE</li>
               <li className="flex items-center gap-2"><Phone className="h-4 w-4 flex-shrink-0" /> (555) 123-4567</li>
               <li className="flex items-center gap-2"><Mail className="h-4 w-4 flex-shrink-0" /> contact@insulatech.pro</li>
             </ul>
