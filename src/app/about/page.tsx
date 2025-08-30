@@ -1,13 +1,33 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, Heart, Shield, Zap } from 'lucide-react';
 import type { Metadata } from 'next';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { leadershipTeam } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'About Us',
   description: 'Learn more about InsulaTech Pro, our mission, values, and the team dedicated to providing the best insulation services.',
 };
+
+const coreValues = [
+    {
+        icon: <Shield className="h-8 w-8 text-primary" />,
+        title: "Quality First",
+        description: "We never compromise on quality. Every project is completed to the highest standards using premium materials and proven techniques."
+    },
+    {
+        icon: <Heart className="h-8 w-8 text-primary" />,
+        title: "Customer Focus",
+        description: "Your satisfaction is our priority. We listen to your needs and deliver solutions that exceed expectations."
+    },
+    {
+        icon: <Zap className="h-8 w-8 text-primary" />,
+        title: "Innovation",
+        description: "We stay ahead with the latest technologies and methods to provide the most effective insulation and waterproofing solutions."
+    }
+]
 
 export default function AboutPage() {
   return (
@@ -101,6 +121,49 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <section className="py-12 md:py-20 lg:py-24 bg-secondary">
+        <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center max-w-3xl mx-auto">
+                <h2 className="text-3xl font-bold text-primary">Our Core Values</h2>
+                <p className="mt-4 text-muted-foreground">The principles that guide everything we do and define who we are as a company.</p>
+            </div>
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                {coreValues.map((value) => (
+                    <div key={value.title} className="flex flex-col items-center text-center">
+                        <div className="flex h-16 w-16 items-center justify-center rounded-lg bg-primary/10">
+                            {value.icon}
+                        </div>
+                        <h3 className="mt-6 text-xl font-bold text-primary">{value.title}</h3>
+                        <p className="mt-2 text-muted-foreground">{value.description}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center max-w-3xl mx-auto">
+                <h2 className="text-3xl font-bold text-primary">Our Leadership Team</h2>
+                <p className="mt-4 text-muted-foreground">Meet the experienced professionals who lead our company and ensure every project meets our exacting standards.</p>
+            </div>
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                {leadershipTeam.map((member) => (
+                    <div key={member.name} className="flex flex-col items-center text-center">
+                        <Avatar className="h-28 w-28 bg-primary text-primary-foreground">
+                            <AvatarFallback className="text-3xl bg-primary text-primary-foreground">{member.initials}</AvatarFallback>
+                        </Avatar>
+                        <h3 className="mt-4 text-lg font-bold">{member.name}</h3>
+                        <p className="text-primary font-medium">{member.role}</p>
+                        <p className="text-sm text-muted-foreground">{member.experience}</p>
+                        <p className="text-sm text-muted-foreground">{member.specialty}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+      </section>
+
     </div>
   );
 }

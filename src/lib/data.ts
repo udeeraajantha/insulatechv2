@@ -201,3 +201,35 @@ export const testimonials = [
     location: 'Industry Park, IL',
   },
 ];
+
+
+export const leadershipTeam = [
+    {
+        name: 'Ahmed Al-Rashid',
+        role: 'Founder & CEO',
+        experience: '15+ years',
+        specialty: 'Waterproofing Systems',
+        initials: 'AA',
+    },
+    {
+        name: 'Omar Hassan',
+        role: 'Technical Director',
+        experience: '12+ years',
+        specialty: 'Spray Foam Technology',
+        initials: 'OH',
+    },
+    {
+        name: 'Sarah Al-Zahra',
+        role: 'Project Manager',
+        experience: '8+ years',
+        specialty: 'Commercial Projects',
+        initials: 'SA',
+    },
+    {
+        name: 'Mohamed Ali',
+        role: 'Field Supervisor',
+        experience: '10+ years',
+        specialty: 'Quality Control',
+        initials: 'MA',
+    },
+];
