@@ -161,10 +161,10 @@ export default function Home() {
             <Card className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground">
                 <CardContent className="p-6 text-center">
                     <div className="flex justify-center text-accent">
-                        <Star className="w-7 h-7" />
-                        <Star className="w-7 h-7" />
-                        <Star className="w-7 h-7" />
-                        <Star className="w-7 h-7" />
+                        <Star className="w-7 h-7" fill="currentColor" />
+                        <Star className="w-7 h-7" fill="currentColor" />
+                        <Star className="w-7 h-7" fill="currentColor" />
+                        <Star className="w-7 h-7" fill="currentColor" />
                         <Star className="w-7 h-7" />
                     </div>
                     <p className="text-sm text-primary-foreground/80 mt-2">Average Rating</p>
