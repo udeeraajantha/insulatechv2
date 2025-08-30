@@ -5,9 +5,10 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { CheckCircle, ArrowRight, ShieldCheck, Zap, Clock, Star } from 'lucide-react';
-import { services, testimonials } from '@/lib/data';
+import { services, testimonials, portfolio } from '@/lib/data';
 
 export default function Home() {
+  const recentProjects = portfolio.slice(0, 3);
   return (
     <div className="flex flex-col">
       <section className="relative w-full py-20 md:py-32 lg:py-48 flex items-center justify-center text-white">
@@ -169,6 +170,44 @@ export default function Home() {
                     <p className="text-sm text-primary-foreground/80 mt-2">Average Rating</p>
                 </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="recent-projects" className="w-full py-12 md:py-24 lg:py-32">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">Recent Projects</h2>
+            <p className="mt-3 max-w-2xl mx-auto text-muted-foreground">
+              See how we've helped property owners across the UAE with professional insulation and waterproofing solutions.
+            </p>
+          </div>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {recentProjects.map((project) => (
+              <Link key={project.id} href="/portfolio" className="group">
+                <Card className="overflow-hidden h-full rounded-lg">
+                  <div className="relative aspect-[4/3]">
+                    <Image
+                      src={project.afterImage}
+                      alt={project.title}
+                      data-ai-hint={project.hint}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                    <div className="absolute bottom-0 p-6">
+                      <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                      <p className="text-sm text-white/80">{project.category}</p>
+                    </div>
+                  </div>
+                </Card>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Button variant="outline" asChild>
+              <Link href="/portfolio">View Full Portfolio <ArrowRight className="ml-2 h-4 w-4" /></Link>
+            </Button>
           </div>
         </div>
       </section>
