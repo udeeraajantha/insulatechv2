@@ -210,12 +210,5 @@ export const leadershipTeam = [
         experience: '15+ years',
         specialty: 'Waterproofing Systems',
         initials: 'AA',
-    },
-    {
-        name: 'Mohamed Ali',
-        role: 'Field Supervisor',
-        experience: '10+ years',
-        specialty: 'Quality Control',
-        initials: 'MA',
-    },
+    }
 ];
